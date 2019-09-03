@@ -13,5 +13,5 @@ df2.createOrReplaceTempView(tbl)
 finl_df=spark.sql("select Country, concat(a,';',b,';',c,';',d,';',e) from tbl")
 finl_df.write.parquet(r'path/ouput.parquet')
 
-
+#newcomment
 
