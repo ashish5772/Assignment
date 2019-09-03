@@ -12,6 +12,5 @@ df2=df.groupBy(df['Country']).agg(sum('V0').alias('a'),sum('V1').alias('b'),sum(
 df2.createOrReplaceTempView(tbl)
 finl_df=spark.sql("select Country, concat(a,';',b,';',c,';',d,';',e) from tbl")
 finl_df.write.parquet(r'path/ouput.parquet')
-
-#newcomment
+#somenewcomment
 
